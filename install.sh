@@ -72,7 +72,7 @@ echo "-> 正在配置 Bash 提示符与快捷别名..."
 
 cat << 'EOF' > ~/.bash_aliases
 # 优雅的极简彩色提示符 (隐藏主机名，只显末级目录)
-PS1='${debian_chroot:+($debian_chroot)}\u:\W\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]\$ '
 
 # 效率提升快照
 alias ..='cd ..'
